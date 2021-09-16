@@ -17,10 +17,12 @@ public class UserRegistration {
 		String firstNamePattern = "[A-Z][a-zA-Z]{2}[a-zA-Z]*";	
 		String lastNamePattern = "[A-Z][a-zA-Z]{2}[a-zA-Z]*";
 		String emailPattern = "[a-zA-Z][0-9a-zA-Z]*([.\\-_+][0-9a-zA-Z]+)?\\@[0-9a-zA-Z]+\\.[a-zA-Z]+([.][a-z]{2})?";
+		String phoneNumberPattern = "[1-9][0-9]\\s[1-9][0-9]{9}";
 		
 		String firstName;
 		String lastName;
 		String email;
+		String phoneNumber;
 		
 		//Ask User for Input
 		System.out.println("Enter the First Name");
@@ -29,11 +31,14 @@ public class UserRegistration {
 		lastName = scanner.nextLine();
 		System.out.println("Enter the Email ID");
 		email = scanner.nextLine();
+		System.out.println("Enter the Phone Number");
+		phoneNumber = scanner.nextLine();
 		
 		//Validate all the fields entered by the User
 		System.out.println("First Name " + " is " + (Pattern.matches(firstNamePattern, firstName)?"Valid":"Invalid"));
 		System.out.println("Last Name " + " is " + (Pattern.matches(lastNamePattern, lastName)?"Valid":"Invalid"));
 		System.out.println("Email ID " + " is " + (Pattern.matches(emailPattern, email)?"Valid":"Invalid"));
+		System.out.println("Phone Number " + " is " + (Pattern.matches(phoneNumberPattern, phoneNumber)?"Valid":"Invalid"));
 		scanner.close();
 	}
 
