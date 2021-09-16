@@ -6,9 +6,9 @@ public class Email {
 
 	public static void main(String[] args) {
 		
-		String pattern = "[a-zA-Z][0-9a-zA-Z]*\\@[a-zA-Z]+";
+		String pattern = "[a-zA-Z][0-9a-zA-Z]*\\@[a-zA-Z]+\\.[a-zA-Z]+";
 		
-		String email = "swz20@gmail";
+		String email = "swz20@gmail.com";
 		
 		System.out.println(email + " is " + (Pattern.matches(pattern, email)?"Valid":"Invalid"));
 	}
